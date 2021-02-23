@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "type_def.h"
+//#include "type_def.h"
 #include "Mapping.c"
 
 void testNumberToPair(int pairNumber,
