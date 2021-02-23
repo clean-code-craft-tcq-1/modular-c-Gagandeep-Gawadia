@@ -1,4 +1,4 @@
-#include "type_def.h"
+#include "Mapping.h"
 
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
