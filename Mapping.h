@@ -1,6 +1,6 @@
 #include "type_def.h"
 
-const int MAX_COLORPAIR_NAME_CHARS = 16;
+extern const int MAX_COLORPAIR_NAME_CHARS;
 
 void ColorPairToString(const ColorPair* colorPair, char* buffer);
 
