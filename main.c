@@ -1,7 +1,8 @@
+#include "Mapping.h"
+
 #include <stdio.h>
 #include <assert.h>
-//#include "type_def.h"
-#include "Mapping.c"
+
 
 void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
