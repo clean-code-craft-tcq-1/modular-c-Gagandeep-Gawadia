@@ -1,7 +1,7 @@
 #include "Mapping.h"
 #include <stdio.h>
 
-const int MAX_COLORPAIR_NAME_CHARS = 16;
+
 const char* MajorColorNames[] = {
     "White", "Red", "Black", "Yellow", "Violet"
 };
