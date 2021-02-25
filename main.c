@@ -25,7 +25,7 @@ void testPairToNumber(
     colorPair.majorColor = majorColor;
     colorPair.minorColor = minorColor;
     int mappedColorCode = GetPairNumberFromColor(&colorPair);
-    printf("For the given color pair the corresponding is %d\n", mappedColorCode);
+    printf("For the given color pair the corresponding color code is %d\n", mappedColorCode);
     assert(mappedColorCode == expectedColorCode);
 }
 
