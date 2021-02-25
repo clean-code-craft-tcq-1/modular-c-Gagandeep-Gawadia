@@ -45,8 +45,8 @@ void PrintManual() {
      
      for (int ColorNr = 1; ColorNr < 26; ColorNr++) { 
         
-         MappedColorPair = GetColorFromPairNumber( ColorNr );
-         ColorPairToString(&MappedColorPair, MappedColorPairstring);
+         MappedColorPair = MappedColorPair4code( ColorNr );
+         FormatColorPair2String(&MappedColorPair, MappedColorPairstring);
          printf ("\t %d \t %s \n", ColorNr , MappedColorPairstring);
      }
 }
