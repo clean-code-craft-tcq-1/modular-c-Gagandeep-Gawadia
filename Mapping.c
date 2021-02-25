@@ -36,7 +36,7 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
             colorPair->minorColor + 1;
 }
 
-void PrintManual { 
+void PrintManual() { 
      
      ColorPair MappedColorPair;
      char MappedColorPairstring[MAX_COLORPAIR_NAME_CHARS];
