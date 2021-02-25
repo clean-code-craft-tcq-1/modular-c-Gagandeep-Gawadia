@@ -15,23 +15,23 @@ int numberOfMajorColors =
 int numberOfMinorColors =
     sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
-void ColorPairToString(const ColorPair* colorPair, char* buffer) {
-    sprintf(buffer, "%s %s",
+void FormatColorPair2String(const ColorPair* colorPair, char* colorStirng) {
+    sprintf(colorSting, "%s %s",
         MajorColorNames[colorPair->majorColor],
         MinorColorNames[colorPair->minorColor]);
 }
 
-ColorPair GetColorFromPairNumber(int pairNumber) {
-    ColorPair colorPair;
-    int zeroBasedPairNumber = pairNumber - 1;
-    colorPair.majorColor = 
-        (enum MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
-    colorPair.minorColor =
-        (enum MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
-    return colorPair;
+ColorPair MappedColorPair4code(int colorCode) {
+    ColorPair mappedColorPair;
+    int indexedColorCode = colorCode - 1;
+    mappedColorPair.majorColor = 
+        (enum MajorColor)(indexedColorCode / numberOfMinorColors);
+    mappedColorPair.minorColor =
+        (enum MinorColor)(indexedColorCode % numberOfMinorColors);
+    return mappedColorPair;
 }
 
-int GetPairNumberFromColor(const ColorPair* colorPair) {
+int MappedCode4ColorPair(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
 }
