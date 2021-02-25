@@ -35,6 +35,8 @@ int main() {
 
     testPairToNumber(BLACK, ORANGE, 12);
     testPairToNumber(VIOLET, SLATE, 25);
-
+    
+    // Print entire 25 color code manual for reference
+    PrintManual();
     return 0;
 }
