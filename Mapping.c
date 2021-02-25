@@ -15,8 +15,8 @@ int numberOfMajorColors =
 int numberOfMinorColors =
     sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
-void FormatColorPair2String(const ColorPair* colorPair, char* colorStirng) {
-    sprintf(colorSting, "%s %s",
+void FormatColorPair2String(const ColorPair* colorPair, char* colorString) {
+    sprintf(colorString, "%s %s",
         MajorColorNames[colorPair->majorColor],
         MinorColorNames[colorPair->minorColor]);
 }
