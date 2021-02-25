@@ -2,10 +2,10 @@
 
 extern const int MAX_COLORPAIR_NAME_CHARS;
 
-void ColorPairToString(const ColorPair* colorPair, char* buffer);
+void FormatColorPair2String(const ColorPair* colorPair, char* buffer);
 
-ColorPair GetColorFromPairNumber(int pairNumber); 
+ColorPair MappedColorPair4code(int pairNumber); 
 
-int GetPairNumberFromColor(const ColorPair* colorPair);
+int MappedCode4ColorPair(const ColorPair* colorPair);
 
 void PrintManual();
