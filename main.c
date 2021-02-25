@@ -30,11 +30,11 @@ void test_MappedCode4ColorPair(
 }
 
 int main() {
-    MappedColorPair4code(4, WHITE, BROWN);
-    MappedColorPair4code(5, WHITE, SLATE);
+    test_MappedColorPair4code(4, WHITE, BROWN);
+    test_MappedColorPair4code(5, WHITE, SLATE);
 
-    MappedCode4ColorPair(BLACK, ORANGE, 12);
-    MappedCode4ColorPair(VIOLET, SLATE, 25);
+    test_MappedCode4ColorPair(BLACK, ORANGE, 12);
+    test_MappedCode4ColorPair(VIOLET, SLATE, 25);
     
     // Print entire 25 color code manual for reference
     PrintManual();
