@@ -35,3 +35,18 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
 }
+
+void PrintManual { 
+     
+     ColorPair MappedColorPair;
+     char MappedColorPairstring[MAX_COLORPAIR_NAME_CHARS];
+     
+     printf( "\t 25 Pair Color Code Manual \n");
+     
+     for (int ColorNr = 1, ColorNr < 26, ColorNr++) { 
+        
+         MappedColorPair = GetColorFromPairNumber( ColorNr );
+         ColorPairToString(&MappedColorPair, MappedColorPairstring);
+         printf ("\t %d  %s \n", ColorNr , MappedColorPairstring);
+     }
+}
