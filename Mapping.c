@@ -43,7 +43,7 @@ void PrintManual() {
      
      printf( "\t 25 Pair Color Code Manual \n");
      
-     for (int ColorNr = 1, ColorNr < 26, ColorNr++) { 
+     for (int ColorNr = 1; ColorNr < 26; ColorNr++) { 
         
          MappedColorPair = GetColorFromPairNumber( ColorNr );
          ColorPairToString(&MappedColorPair, MappedColorPairstring);
