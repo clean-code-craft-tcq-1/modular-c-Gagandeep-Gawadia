@@ -11,7 +11,7 @@ void testNumberToPair(int colorCode,
     ColorPair mappedColorPair = GetColorFromPairNumber(colorCode);
     char mappedColorPairString[MAX_COLORPAIR_NAME_CHARS];
     ColorPairToString(&mappedColorPair, mappedColorPairString);
-    printf("Corresponding color pair (Major:Minor) details %s\n", mappedColorPairString);
+    printf("For the provided color code %d, the corresponding color pair (Major:Minor) is : %s\n", colorCode, mappedColorPairString);
     assert(mappedColorPair.majorColor == expectedMajorColor);
     assert(mappedColorPair.minorColor == expectedMinorColor);
 }
@@ -25,7 +25,7 @@ void testPairToNumber(
     colorPair.majorColor = majorColor;
     colorPair.minorColor = minorColor;
     int mappedColorCode = GetPairNumberFromColor(&colorPair);
-    printf("Corresponding Color code for the given color pair is %d\n", mappedColorCode);
+    printf("For the given color pair the corresponding is %d\n", mappedColorCode);
     assert(mappedColorCode == expectedColorCode);
 }
 
