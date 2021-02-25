@@ -47,6 +47,6 @@ void PrintManual() {
         
          MappedColorPair = GetColorFromPairNumber( ColorNr );
          ColorPairToString(&MappedColorPair, MappedColorPairstring);
-         printf ("\t %d  %s \n", ColorNr , MappedColorPairstring);
+         printf ("\t %d \t %s \n", ColorNr , MappedColorPairstring);
      }
 }
