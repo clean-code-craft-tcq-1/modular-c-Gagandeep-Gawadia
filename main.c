@@ -4,29 +4,29 @@
 #include <assert.h>
 
 
-void testNumberToPair(int pairNumber,
-    enum MajorColor expectedMajor,
-    enum MinorColor expectedMinor)
+void testNumberToPair(int colorCode,
+    enum MajorColor expectedMajorColor,
+    enum MinorColor expectedMinorColor)
 {
-    ColorPair colorPair = GetColorFromPairNumber(pairNumber);
-    char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
-    ColorPairToString(&colorPair, colorPairNames);
-    printf("Got pair %s\n", colorPairNames);
-    assert(colorPair.majorColor == expectedMajor);
-    assert(colorPair.minorColor == expectedMinor);
+    ColorPair mappedColorPair = GetColorFromPairNumber(colorCode);
+    char mappedColorPairString[MAX_COLORPAIR_NAME_CHARS];
+    ColorPairToString(&mappedColorPair, mappedColorPairString);
+    printf("Corresponding color pair (Major:Minor) details %s\n", mappedColorPairString);
+    assert(mappedColorPair.majorColor == expectedMajorColor);
+    assert(mappedColorPair.minorColor == expectedMinorColor);
 }
 
 void testPairToNumber(
-    enum MajorColor major,
-    enum MinorColor minor,
-    int expectedPairNumber)
+    enum MajorColor majorColor,
+    enum MinorColor minorColor,
+    int expectedColorCode)
 {
     ColorPair colorPair;
-    colorPair.majorColor = major;
-    colorPair.minorColor = minor;
-    int pairNumber = GetPairNumberFromColor(&colorPair);
-    printf("Got pair number %d\n", pairNumber);
-    assert(pairNumber == expectedPairNumber);
+    colorPair.majorColor = majorColor;
+    colorPair.minorColor = minorColor;
+    int mappedColorCode = GetPairNumberFromColor(&colorPair);
+    printf("Corresponding Color code for the given color pair is %d\n", mappedColorCode);
+    assert(mappedColorCode == expectedColorCode);
 }
 
 int main() {
